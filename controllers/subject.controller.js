@@ -11,8 +11,14 @@ const subjectController = {
     getMessages: async (req, res) => {
         const categoryId = parseInt(req.params.categoryId);
 
-        if(isNaN(categoryId) || categoryId < 0) {
+        if(isNaN(categoryId) || (categoryId < 0)) {
             res.status(400).json({message: 'Bad Category Id'});
+            return
+        }
+
+        const exists = await categoryService.exists(categoryId);
+        if(!exists) {
+            res.status(404).json({message: 'Category don\'t exists'});
             return
         }
 
@@ -23,8 +29,20 @@ const subjectController = {
     addMessage: async (req, res) => {
         const categoryId = parseInt(req.params.categoryId);
 
+        
+        if(isNaN(categoryId) || (categoryId < 0)) {
+            res.status(400).json({message: 'Bad Category Id'});
+            return
+        }
+
+        const exists = await categoryService.exists(categoryId);
+        if(!exists) {
+            res.status(404).json({message: 'Category don\'t exists'});
+            return
+        }
+
         if(!req.body.content || !req.body.author) {
-            res.status(400).json('Data need properties : author and content');
+            res.status(400).json('Properties author and content are required');
             return;
         }
 

@@ -21,6 +21,13 @@ const categoryService = {
         );
         
         return results;
+    },
+
+    exists: async (id) => {
+        await db.read();
+
+        const result = db.data.category.find(c => c.id === id);
+        return result !== undefined;
     }
 };
 
