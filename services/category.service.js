@@ -14,6 +14,7 @@ const categoryService = {
                 return new CategoryDTO({
                     id: c.id,
                     name: c.name,
+                    icon: c.icon,
                     count: messages.length,
                     lastUpdate
                 });

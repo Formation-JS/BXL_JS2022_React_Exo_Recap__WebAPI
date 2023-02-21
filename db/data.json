@@ -2,11 +2,28 @@
   "category": [
     {
       "id": 1,
-      "name": "Demo"
+      "name": "Accueil",
+      "icon": "images/demo.jpg"
     },
     {
       "id": 2,
-      "name": "React JS"
+      "name": "React JS",
+      "icon": "images/react.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Express JS",
+      "icon": "images/express.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Svelte",
+      "icon": "images/svelte.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Angular",
+      "icon": "images/angular.jpg"
     }
   ],
   "message": [
@@ -30,6 +47,20 @@
       "author": "Balthy",
       "createAt": 1676973646,
       "categoryId": 1
+    },
+    {
+      "content": "Go manger !",
+      "author": "Ryan",
+      "categoryId": 2,
+      "id": 4,
+      "createAt": 1676977690
+    },
+    {
+      "id": 5,
+      "content": "I 💜 MLP",
+      "author": "Michaël",
+      "categoryId": 3,
+      "createAt": 1676988190
     }
   ]
 }
