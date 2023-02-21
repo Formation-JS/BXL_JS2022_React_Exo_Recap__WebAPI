@@ -11,18 +11,17 @@ const categoryService = {
                 const messages = db.data.message.filter(m => m.categoryId === c.id);
                 const lastUpdate = Math.max(...messages.map(m => m.createAt));
 
-                return new CategoryDTO(
-                    c.id,
-                    c.name,
-                    messages.length,
+                return new CategoryDTO({
+                    id: c.id,
+                    name: c.name,
+                    count: messages.length,
                     lastUpdate
-                );
+                });
             }
         );
         
         return results;
     }
-
 };
 
 

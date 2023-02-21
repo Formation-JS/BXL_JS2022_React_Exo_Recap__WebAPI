@@ -1,11 +1,9 @@
 import express from 'express';
-import categoryRouter from './category.router.js'
-import messageRouter from './message.router.js'
+import subjectRouter from './subject.router.js'
 
 const router = express.Router();
 
-router.use('/message', messageRouter);
-router.use('/category', categoryRouter);
+router.use('/subject', subjectRouter);
 
 
 export default router;
