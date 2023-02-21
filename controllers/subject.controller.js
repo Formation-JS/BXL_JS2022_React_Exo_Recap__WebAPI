@@ -34,9 +34,10 @@ const subjectController = {
             categoryId
         };
 
-        await messageService.add(data);
+        const result = await messageService.add(data);
 
-        res.sendStatus(201);
+        res.location(`/api/subject/${categoryId}/message`)
+        res.status(201).json(result);
     }
 
 };

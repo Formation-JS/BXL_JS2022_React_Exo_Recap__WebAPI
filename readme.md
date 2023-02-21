@@ -20,7 +20,7 @@ GET /api/subject/{CategoryId}/message
 
 ### Envoyer un message
 ```
-POST /api/subject/2/message
+POST /api/subject/{CategoryId}/message
  
 {
 	"author": "Zaza",

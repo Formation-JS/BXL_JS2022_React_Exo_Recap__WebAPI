@@ -12,15 +12,22 @@ const messageService = {
 
         return results;
     },
-    
-    add: async (data) => {
+
+    add: async ({ content, author, categoryId }) => {
         await db.read();
 
-        const id = Math.max(...db.data.message.map(m => m.id)) + 1;
-        const createAt = parseInt((new Date()).getTime() / 1000);
-        db.data.message.push({...data, id, createAt})
+        const message = {
+            id : Math.max(...db.data.message.map(m => m.id)) + 1,
+            content,
+            author,
+            categoryId,
+            createAt : parseInt((new Date()).getTime() / 1000)
+        };
 
+        db.data.message.push(message);
         await db.write();
+
+        return message;
     }
 
 };
