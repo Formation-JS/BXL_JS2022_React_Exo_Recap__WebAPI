@@ -1,9 +1,11 @@
-const messageController = require('../controllers/message.controller');
+import express from 'express';
+import messageController from '../controllers/message.controller.js';
 
-const messageRouter = require('express').Router();
+const messageRouter = express.Router();
 
 messageRouter.route('/')
     .get(messageController.getAll)
     .post(messageController.add);
 
-module.exports = messageRouter;
+
+export default messageRouter;

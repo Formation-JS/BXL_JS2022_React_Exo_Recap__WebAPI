@@ -1,10 +1,11 @@
-const categoryRouter = require('./category.router');
-const messageRouter = require('./message.router');
+import express from 'express';
+import categoryRouter from './category.router.js'
+import messageRouter from './message.router.js'
 
-const router = require('express').Router();
-
+const router = express.Router();
 
 router.use('/message', messageRouter);
 router.use('/category', categoryRouter);
 
-module.exports = router;
+
+export default router;

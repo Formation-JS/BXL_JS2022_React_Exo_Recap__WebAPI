@@ -1,11 +1,10 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+import express from 'express';
+import router from './routers/index.js';
 
 // Variable d'environement
+dotenv.config();
 const { PORT } = process.env;
-
-// Imports
-const express = require('express');
-const router = require('./routers');
 
 // Web API
 const app = express();

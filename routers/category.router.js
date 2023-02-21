@@ -1,8 +1,10 @@
-const categoryController = require('../controllers/category.controller');
+import express from 'express';
+import categoryController from './../controllers/category.controller.js';
 
-const categoryRouter = require('express').Router();
+const categoryRouter = express.Router();
 
 categoryRouter.route('/')
     .get(categoryController.getAll);
 
-module.exports = categoryRouter;
+
+export default categoryRouter;
