@@ -7,7 +7,7 @@ import('express-async-errors');
 
 // Variable d'environement
 dotenv.config();
-const { PORT } = process.env;
+const PORT = process.env.PORT ?? 8080;
 
 // Web API
 const app = express();
