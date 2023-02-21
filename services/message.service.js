@@ -11,6 +11,16 @@ const messageService = {
             .map(m => new MessageDTO(m));
 
         return results;
+    },
+    
+    add: async (data) => {
+        await db.read();
+
+        const id = Math.max(...db.data.message.map(m => m.id)) + 1;
+        const createAt = parseInt((new Date()).getTime() / 1000);
+        db.data.message.push({...data, id, createAt})
+
+        await db.write();
     }
 
 };

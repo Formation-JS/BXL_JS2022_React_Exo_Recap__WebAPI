@@ -1,35 +1,35 @@
 {
-    "category": [
-        {
-            "id": 1,
-            "name": "Demo"
-        },
-        {
-            "id": 2,
-            "name": "React JS"
-        }
-    ],
-    "message": [
-        {
-            "id": 1,
-            "content": "Hello World",
-            "author": "Zaza",
-            "createAt": 1676970784,
-            "categoryId": 1
-        },
-        {
-            "id": 2,
-            "content": "Exo recap !",
-            "author": "Balthy",
-            "createAt": 1676970921,
-            "categoryId": 2
-        },
-        {
-            "id": 3,
-            "content": "Second message",
-            "author": "Balthy",
-            "createAt": 1676973646,
-            "categoryId": 1
-        }
-    ]
+  "category": [
+    {
+      "id": 1,
+      "name": "Demo"
+    },
+    {
+      "id": 2,
+      "name": "React JS"
+    }
+  ],
+  "message": [
+    {
+      "id": 1,
+      "content": "Hello World",
+      "author": "Zaza",
+      "createAt": 1676970784,
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "content": "Exo recap !",
+      "author": "Balthy",
+      "createAt": 1676970921,
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "content": "Second message",
+      "author": "Balthy",
+      "createAt": 1676973646,
+      "categoryId": 1
+    }
+  ]
 }

@@ -20,8 +20,23 @@ const subjectController = {
         res.status(200).json(messages);
     },
 
-    addMessage: (req, res) => {
-        res.sendStatus(501);
+    addMessage: async (req, res) => {
+        const categoryId = parseInt(req.params.categoryId);
+
+        if(!req.body.content || !req.body.author) {
+            res.status(400).json('Data need properties : author and content');
+            return;
+        }
+
+        const data = {
+            content: req.body.content,
+            author: req.body.author,
+            categoryId
+        };
+
+        await messageService.add(data);
+
+        res.sendStatus(201);
     }
 
 };
