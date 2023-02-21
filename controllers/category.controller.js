@@ -1,6 +1,10 @@
+import categoryService from '../services/category.service.js';
+
 const categoryController = {
 
-    getAll: (req, res) => {
+    getAll: async (req, res) => {
+        const categories = await categoryService.getAll();
+        res.status(200).json(categories);
     }
 
 };
