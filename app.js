@@ -1,6 +1,8 @@
 import dotenv from 'dotenv';
-import express from 'express';
 import router from './routers/index.js';
+
+import express from 'express';
+import('express-async-errors');
 
 // Variable d'environement
 dotenv.config();
