@@ -8,22 +8,22 @@
     {
       "id": 2,
       "name": "React JS",
-      "icon": "images/react.jpg"
+      "icon": "images/react.png"
     },
     {
       "id": 3,
       "name": "Express JS",
-      "icon": "images/express.jpg"
+      "icon": "images/express.png"
     },
     {
       "id": 4,
       "name": "Svelte",
-      "icon": "images/svelte.jpg"
+      "icon": "images/svelte.png"
     },
     {
       "id": 5,
       "name": "Angular",
-      "icon": "images/angular.jpg"
+      "icon": "images/angular.png"
     }
   ],
   "message": [
